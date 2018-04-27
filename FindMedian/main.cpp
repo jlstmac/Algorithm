@@ -8,9 +8,9 @@ float findMedian(int source1[],int m,int source2[],int n)
 {
     int target = (m+n)/2,p1 = 0,p2 = 0,p3 = 0,ret = 0,lastRet = 0;
 
-        while (p1 < m && p2 < n && p3 <= target){
+        while ( p3 <= target){
             lastRet = ret;
-            if (source1[p1] > source2[p2]){
+            if ( (p1 < m && p2 < n && source1[p1] > source2[p2]) || p1 >= m ){
                 ret = source2[p2++];
             }else{
                 ret = source1[p1++];
@@ -18,28 +18,15 @@ float findMedian(int source1[],int m,int source2[],int n)
             ++p3;
         }
 
-        while (p1 < m && p3 <= target){
-            lastRet = ret;
-            ret = source1[p1++];
-            ++p3;
-        }
-        while (p2 < n && p3 <= target){
-            lastRet = ret;
-            ret = source2[p2++];
-            ++p3;
-
-        }
-
     return ((m+n)%2 == 0) ? (ret+lastRet)/2.0 : ret;
-
-
+    
 }
 
 int main() {
 
-    int s1[1] = {1};
-    int s2[1] = {1};
-    float pRet = findMedian(s1,1,s2,0);
+    int s1[3] = {1,4,5};
+    int s2[3] = {1,2,7};
+    float pRet = findMedian(s1,3,s2,3);
     printf("midia:%f",pRet);
     return 0;
 }
