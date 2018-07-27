@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/jlstmac/Documents/Dev/Algorithm/ReverseInteger/main.cpp
+iostream
+-
+math.h
+/Users/jlstmac/Documents/Dev/Algorithm/ReverseInteger/math.h
+
