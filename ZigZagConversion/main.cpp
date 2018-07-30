@@ -74,19 +74,21 @@ string convert(string s, int numRows) {
         ret[p++] = s[i];
     }
     for (int row = 1; row < numRows - 1; row ++) {
-        for (int j = 0; j < ; ++j) {
-            
+        for (int j = 0; j < length; j += inteval) {
+
         }
         ret[p++] = s[i];
     }
     for (int i = numRows - 1; i < length; i += inteval) {
         ret[p++] = s[i];
     }
+    return string(ret,length);
+
 }
 
 int main() {
     string s = string("PAYPALISHIRING");
-    string ret = convert01(s,4);
+    string ret = convert(s,4);
     printf("%s",&ret);
     return 0;
 }
